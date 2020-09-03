@@ -41,7 +41,7 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-argument-parser", .upToNextMajor(from: "0.0.6")),
         .package(url: "https://github.com/marmelroy/Zip.git", .upToNextMinor(from: "2.0.0")),
         .package(url: "https://github.com/SwiftDocOrg/GraphViz/", from: "0.1.0"),
-        .package(url: "https://github.com/FabrizioBrancati/Queuer.git", .upToNextMajor(from: "2.0.0"))
+        .package(url: "https://github.com/FabrizioBrancati/Queuer.git", .upToNextMajor(from: "2.0.0")),
     ],
     targets: [
         .target(

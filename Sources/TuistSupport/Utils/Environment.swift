@@ -25,6 +25,9 @@ public protocol Environmenting: AnyObject {
 
     /// Returns all the environment variables that are specific to Tuist (prefixed with TUIST_)
     var tuistVariables: [String: String] { get }
+
+    /// Returns the path to the directory where the async queue events are persisted.
+    var queueDirectory: AbsolutePath { get }
 }
 
 /// Local environment controller.
@@ -110,6 +113,14 @@ public class Environment: Environmenting {
             return AbsolutePath(envVariable)
         } else {
             return directory.appending(component: "Cache")
+        }
+    }
+
+    public var queueDirectory: AbsolutePath {
+        if let envVariable = ProcessInfo.processInfo.environment[Constants.EnvironmentVariables.queueDirectory] {
+            return AbsolutePath(envVariable)
+        } else {
+            return directory.appending(component: Constants.AsyncQueue.directoryName)
         }
     }
 
