@@ -4,6 +4,10 @@ Please, check out guidelines: https://keepachangelog.com/en/1.0.0/
 
 ## Next
 
+### Changed
+
+- The `tuist edit` command adds `Setup.swift` and `Config.swift` to the generated project if they exist.
+
 ## 1.18.1 - Manaslu
 
 ### Fixed
